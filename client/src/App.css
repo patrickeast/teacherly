@@ -1,28 +1,120 @@
+body, html {
+  max-width: 100%;
+}
+
 .App {
   text-align: center;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  animation: App-logo-spin infinite 10s linear;
+  height: 40px;
+  margin: 0 auto;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+  background-image: url('./images/rocketTiny.jpg');
+  background-size: 100%;
+  background-position-y: -100px;
+  background-blend-mode: multiply;
+  background-color: #555c9e;
+  mix-blend-mode: multiply;
+  background-repeat: no-repeat;
+  color: #fff;
+  min-height: 300px;
+  padding: 50px 20px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 9999;
+}
+
+.App-header > div {
+  margin: 0;
+  margin-bottom: 0px;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 4rem;
 }
 
-.App-intro {
-  font-size: large;
+
+h2 {
+  text-shadow: 1px 1px black;
+}
+
+
+@media (max-width: 1100px) {
+  .App-header {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 200px;
+    padding: 50px 20px 30px 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .App-header {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 100px;
+    padding: 10px 20px 10px 20px;
+  }
+  .App-title {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .App-header {
+    background-size: 200%;
+    background-repeat: repeat;
+    min-height: 300px;
+    padding: 50px 20px 50px 20px;
+  }
+
+  .App-title {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.bodyContainer {
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-family: "Satisfy", cursive;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h2, h3, h4, h5, h6, ul, li, ol, a, p {
+  font-family: "Rajdhani", sans-serif;
 }
