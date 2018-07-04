@@ -78,7 +78,7 @@ h2 {
   .App-header {
     background-size: 200%;
     background-position-y: -65px;
-    background-color: none;
+    background-color: #fff;
     background-repeat: repeat;
     min-height: 300px;
     padding: 50px 20px 50px 20px;
