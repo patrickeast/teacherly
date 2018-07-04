@@ -77,7 +77,7 @@ h2 {
 @media (max-width: 500px) {
   .App-header {
     background-size: 200%;
-    background-position-y: -65px;
+    background-position-y: -70px;
     background-color: #fff;
     background-repeat: repeat;
     min-height: 300px;
