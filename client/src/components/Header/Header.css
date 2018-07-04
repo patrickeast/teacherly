@@ -54,7 +54,7 @@
   
   @media (max-width: 500px) {
     .headerWrap {
-      background-size: 300%;
+      background-size: 200%;
       background-repeat: repeat;
       min-height: 400px;
       padding: 170px 20px 30px 20px;
