@@ -1,6 +1,12 @@
 {
   "name": "teacherly",
   "version": "0.1.0",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:3001",
+      "secure": false
+    }
+  },
   "private": true,
   "dependencies": {
     "react": "^16.4.1",
@@ -9,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && mv -v ./build/* ../public/ ",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
