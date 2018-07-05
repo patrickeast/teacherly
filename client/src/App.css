@@ -37,12 +37,13 @@ body, html {
 }
 
 .App-title {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 
 h2 {
   text-shadow: 1px 1px black;
+  font-size: 2rem;
 }
 
 
