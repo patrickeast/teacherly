@@ -11,7 +11,7 @@ class App extends Component {
         <Nav />
         <header className="App-header">
           <h1 className="App-title">Welcome to Teacherly.</h1>
-          <h2>Data visualization to fit your schedule.</h2>
+          <h2>Student tracking on your schedule.</h2>
         </header>
         <Footer />
       </div>
