@@ -17,7 +17,7 @@ body, html {
 .App-header {
   background-image: url('./images/rocketTiny.jpg');
   background-size: 100%;
-  background-position-y: -100px;
+  background-position-y: -160px;
   background-blend-mode: hard-light;
   background-color: #8595b1;
   background-repeat: no-repeat;
@@ -43,7 +43,7 @@ body, html {
 
 h2 {
   text-shadow: 1px 1px black;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 
@@ -113,10 +113,6 @@ a {
 
 h1 {
   font-family: "Satisfy", cursive;
-}
-
-h2 {
-  font-size: 24px;
 }
 
 h2, h3, h4, h5, h6, ul, li, ol, a, p {
