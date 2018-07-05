@@ -28,8 +28,8 @@ body, html {
   width: 100%;
   position: relative;
   margin-bottom: 20px;
-  box-shadow: 0px 20px rgba(0,0,0,0.5);
   z-index: 9999;
+  box-shadow: 0px 20px rgba(0,0,0,0.5);
 
 }
 
@@ -80,19 +80,21 @@ h2 {
 @media (max-width: 500px) {
   .App-header {
     background-size: 200%;
-    background-position-y: -70px;
+    background-position-y: 0px;
     background-color: #fff;
+    background-blend-mode: hard-light;
+    background-color: #8595b1;
     background-repeat: no-repeat;
     min-height: 350px;
     padding: 50px 20px 50px 20px;
   }
 
   .App-title {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
 
