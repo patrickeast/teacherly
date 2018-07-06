@@ -8,11 +8,11 @@ const Nav = props => (
   <nav>
     <ul className="navbar bg-dark">
       <li>
-        <a href="#">
+        <a href="/">
           <img src={logo} className="App-logo" alt="logo" />
         </a>
       </li>
-      <li class="float-right">
+      <li className="float-right">
         <a href="/">Sign In</a>
       </li>
     </ul>

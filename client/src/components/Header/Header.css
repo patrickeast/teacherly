@@ -1,71 +1,60 @@
-.headerWrap {
-    background-image: url("https://images.unsplash.com/photo-1530213598505-ac70d9b7b63f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c966f134136b9c1c1c54cc7b9aa824d1&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb");
-    background-size: 100%;
-    background-blend-mode: multiply;
-    background-color: #555c9e;
-    background-repeat: no-repeat;
-    color: #fff;
-    min-height: 400px;
-    padding: 220px 20px;
-    padding-bottom: 140px;
-    text-align: center;
-    width: 100%;
-    position: relative;
-    margin-bottom: 20px;
+.App-header {
+  text-align: center;
+  width: 100%;
+  height: 87vh;
+  position: relative;
+  margin-bottom: 20px;
+  background-image: url('../../images/rocketTiny.jpg');
+  background-size: 100%;
+  background-blend-mode: hard-light;
+  background-color: #8595b1;
+  background-repeat: no-repeat;
+  color: #fff;
+ 
+}
+
+.headerText {
+  margin: 0;
+  margin-bottom: 0px;
+   padding: 200px 20px;
+  z-index: 9999;
+}
+
+.App-title {
+  font-size: 6rem;
+  text-shadow: 2px 2px black;
+}
+
+h2 {
+  text-shadow: 2px 2px black;
+  font-size: 3rem;
+}
+
+
+@media (max-width: 1100px) {
+  .App-header {
+    min-height: 300px;
+    padding: 100px 20px 30px 20px;
   }
-  
-  .header > div {
-    margin: 0;
-    margin-bottom: 0px;
+}
+
+@media (max-width: 750px) {
+  .App-header {
+    min-height: 300px;
+    padding: 100px 20px 10px 20px;
   }
-  
-  h1 {
-    font-size: 6rem;
+  .App-title {
+    font-size: 4rem;
   }
-  
+
   h2 {
-    text-shadow: 1px 1px black;
+    font-size: 2rem;
   }
-  
-  @media (max-width: 1100px) {
-    .headerWrap {
-      background-size: 100%;
-      background-repeat: repeat;
-      min-height: 400px;
-      padding: 150px 20px 30px 20px;
-    }
+}
+
+@media (max-width: 500px) {
+  .App-header {
+    min-height: 350px;
+    padding: 50px 20px 50px 20px;
   }
-  
-  @media (max-width: 750px) {
-    .headerWrap {
-      background-size: 200%;
-      background-repeat: repeat;
-      min-height: 400px;
-      padding: 150px 20px 30px 20px;
-    }
-    h1 {
-      font-size: 5rem;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-    }
-  }
-  
-  @media (max-width: 500px) {
-    .headerWrap {
-      background-size: 200%;
-      background-repeat: repeat;
-      min-height: 400px;
-      padding: 170px 20px 30px 20px;
-    }
-  
-    h1 {
-      font-size: 4rem;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-    }
-  }
-  
+}
