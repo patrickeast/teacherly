@@ -3,8 +3,7 @@ import "./Footer.css";
 
 const Footer = props => (
   <footer className="footer text-muted">
-    <div className="container">
-      <ul className="navbar">
+      <ul>
         <li>
           <a href="/">Features</a>
         </li>
@@ -15,7 +14,6 @@ const Footer = props => (
           <a href="/">Contact</a>
         </li>
       </ul>
-    </div>
   </footer>
 );
 
