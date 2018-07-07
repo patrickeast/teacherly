@@ -13,16 +13,36 @@ class Features extends Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12">
-                            <div className="card">
+                            <div className="card text-white bg-info">
                                 <div className="card-body">
-                                    <h5 className="card-title">What is Teacherly?</h5>
-                                    <p className="card-text"></p>
+                                    <h5 className="card-header">What is Teacherly?</h5>
+                                    <div class="card-body">
+                                        <h5 class="card-title">At its core...a student data tracker.</h5>
+                                        <p class="card-text">Teacherly is a data tracker and visualization tool for teachers. Its primary use is for teachers,
+                                        but as I built out the idea with my wife (a 5th grade teacher), it became apparent that there are three tiers to this
+                                        product -- a <b>Teacher</b> tier, a <b>Parent</b> tier, and an <b>Administrator</b> tier.
+                                        <br />
+                                        I'll only be working on the Teacher app for this project, since it will have all of the main components necessary to 
+                                        create the other two tiers. The teachers will be able to create an account, defining their name, school, subject, and email
+                                        address. Once created, the app will take the user to their own page with a Profile area up top and the main features of the
+                                        app below that in a tabbed card container. 
+                                        <br /> On the first tab, teachers will be able to import their class rosters, update the rosters live on-screen to add/remove 
+                                        students, and export the roster into a .csv. This will make the primary table for the app.
+                                        <br /> On the second tab, teachers will be able to add a test for the entire class, with an editable table on-screen for the
+                                        test questions, test possible points, and test given points. They will also be able to grade a test for a specific student.
+                                        <br />On the third tab, teachers will be able to select a student (or multiple students), and a test (or multiple tests), and
+                                        chartJS will visualize scores and data for them. This is meant to be a quick and easy overview for the teacher to be able to 
+                                        assess standards, compare students, and get reports.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <br />
+                    <br />
                     <div className="row justify-content-around">
-                        <div className="col-sm-6 col-md-4 col-lg-3">
+                        <div className="col-sm-6 col-md-4">
                             <div className="card">
                                 <img className="card-img-top" src={TechImg} alt="Card cap" />
                                 <div className="card-body">
@@ -34,13 +54,13 @@ class Features extends Component {
                                         <li>Passport Local for Auth Handling</li>
                                         <li>Customized version of ChartJS for data visualization</li>
                                         <li>NightmareJS for testing (If I have time)</li>
-                                        <li className="disabled">More to come...</li>
+                                        <li>More to come...</li>
                                     </ul>
                                     <a href="https://github.com/patrickeast/teacherly" target="_blank" className="btn btn-outline-info">View the GitHub Repo.</a>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-12 col-md-4 col-lg-3">
+                        <div className="col-sm-12 col-md-4">
                             <div className="card">
                                 <img className="card-img-top" src={HomeImg} alt="Card cap" />
                                 <div className="card-body">
@@ -50,7 +70,7 @@ class Features extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-12 col-md-4 col-lg-3">
+                        <div className="col-sm-12 col-md-4">
                             <div className="card">
                                 <img className="card-img-top" src={TrelloImg} alt="Card cap" />
                                 <div className="card-body">
