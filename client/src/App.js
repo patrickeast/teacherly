@@ -12,7 +12,7 @@ const App = () => (
       <Nav />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="https://serene-reef-42750.herokuapp.com/features" component={Features} />
+        <Route exact path="/features" component={Features} />
       </Switch>
       <Footer />
     </div>
