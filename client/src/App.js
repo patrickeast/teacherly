@@ -15,7 +15,7 @@ class App extends Component {
         <Header />
         <div className="container-fluid">
           <div className="row justify-content-around">
-            <div className="col-sm-12 col-md-4 col-lg-3">
+            <div className="col-sm-6 col-md-4 col-lg-3">
               <div className="card">
                 <img className="card-img-top" src={TeacherImg} alt="Card cap" />
                 <div className="card-body">
