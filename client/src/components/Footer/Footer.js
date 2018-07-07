@@ -5,7 +5,7 @@ const Footer = props => (
   <footer className="footer text-muted">
       <ul>
         <li>
-          <a href="/">Features</a>
+          <a href="/features">Features</a>
         </li>
         <li>
           <a href="/">About</a>
