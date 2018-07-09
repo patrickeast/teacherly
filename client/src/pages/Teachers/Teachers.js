@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Header from "../../components/Header/Header.js";
 
 export default class Teachers extends Component {
     render () {
@@ -12,7 +13,6 @@ export default class Teachers extends Component {
                         </div>
                     </div>
                 </div>
-                <Footer />
             </div>
         )
     }
