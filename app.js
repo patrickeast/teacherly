@@ -16,6 +16,19 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirnam + 'public/index.html'));
 });
 
+var mysql = require("mysql");
+//Database connection
+app.use(function(req, res, next){
+	res.locals.connection = mysql.createConnection({
+		host     : 'localhost',
+		user     : 'root',
+		password : 'root',
+		database : 'teacherlyDB'
+	});
+	res.locals.connection.connect();
+	next();
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
