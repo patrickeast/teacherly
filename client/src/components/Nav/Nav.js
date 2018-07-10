@@ -7,8 +7,10 @@ const Nav = props => (
     <a className="navbar-brand" href="/">
       <img src={logo} className="App-logo" alt="logo" />
     </a>
-    
-    <button className="ml-auto btn btn-sm btn-outline-info mt-2 mt-md-0 my-2 my-sm-0" type="submit" href="/">Log In / Sign Up</button>
+    <div className="ml-auto mt-2 mt-md-0 my-2 my-sm-0">
+      <a className="btn btn-sm btn-outline-info text-white" href="/login" role="button">Log In</a>
+      <a className="btn btn-sm btn-outline-info ml-3 text-white" href="/signup" role="button">Sign Up</a>
+    </div>
   </nav>
 );
 

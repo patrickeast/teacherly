@@ -5,7 +5,7 @@ import TechImg from '../../images/Tech.png';
 import TrelloImg from '../../images/Trello.png';
 import HomeImg from '../../images/Home.jpeg';
 
-class Features extends Component {
+export default class Features extends Component {
     render() {
         return (
             <div>
@@ -56,7 +56,7 @@ class Features extends Component {
                                         <li>NightmareJS for testing (If I have time)</li>
                                         <li>More to come...</li>
                                     </ul>
-                                    <a href="https://github.com/patrickeast/teacherly" target="_blank" className="btn btn-outline-info">View the GitHub Repo.</a>
+                                    <a href="https://github.com/patrickeast/teacherly" target="_blank" rel="noopener noreferrer" className="btn btn-outline-info">View the GitHub Repo.</a>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +66,7 @@ class Features extends Component {
                                 <div className="card-body">
                                     <h5 className="card-title">Wire Frames</h5>
                                     <p className="card-text">I uploaded my wire frames to Dropbox. I have detailed drawings of the two main pages, with comments on each image to discuss individual features.</p>
-                                    <a href="https://www.dropbox.com/sh/owk4qfnq9a48649/AAC8AN3Paw214CH2m2cUsP9Za?dl=0" target="_blank" className="btn btn-outline-info">View Wire Frames</a>
+                                    <a href="https://www.dropbox.com/sh/owk4qfnq9a48649/AAC8AN3Paw214CH2m2cUsP9Za?dl=0" target="_blank" rel="noopener noreferrer" className="btn btn-outline-info">View Wire Frames</a>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ class Features extends Component {
                                 <div className="card-body">
                                     <h5 className="card-title">Trello Board</h5>
                                     <p className="card-text">Trello will be vital in keeping up-to-date with my tasks. I'm attempting to complete a lot here, even by only doing the Teacher "tier" of the product.</p>
-                                    <a href="https://trello.com/b/RCKKnpBB/teacherly" target="_blank" className="btn btn-outline-info">View Trello Board</a>
+                                    <a href="https://trello.com/b/RCKKnpBB/teacherly" target="_blank" rel="noopener noreferrer" className="btn btn-outline-info">View Trello Board</a>
                                 </div>
                             </div>
                         </div>
@@ -87,5 +87,3 @@ class Features extends Component {
         );
     }
 }
-
-export default Features;

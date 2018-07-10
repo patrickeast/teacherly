@@ -16,7 +16,7 @@ export default class Login extends Component {
                                 <div className="card-title">
                                 </div>
                                 <div className="card-text">
-                                    <form id="signin" name="signin" method="post" action="signin">
+                                    <form id="signin" name="signin" method="post" action="/signin">
                                         <div className="row justify-content-around">
                                             <div className="col-11">
                                                 <div className="form-group">

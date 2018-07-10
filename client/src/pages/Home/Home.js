@@ -5,7 +5,7 @@ import TeacherImg from '../../images/teacher.png';
 import PrincipalImg from '../../images/principal.png';
 import ParentsImg from '../../images/Parents.png';
 
-class Home extends Component {
+export default class Home extends Component {
     render() {
         return (
             <div>
@@ -48,5 +48,3 @@ class Home extends Component {
         );
     }
 }
-
-export default Home;
