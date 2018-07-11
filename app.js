@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var dbConfig = require('./configs/mysql.config');
 
 var app = express();
 
@@ -11,23 +12,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(dbConfig);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirnam + 'public/index.html'));
 });
 
-var mysql = require("mysql");
-//Database connection
-app.use(function(req, res, next){
-	res.locals.connection = mysql.createConnection({
-		host     : 'localhost',
-		user     : 'root',
-		password : 'root',
-		database : 'teacherlyDB'
-	});
-	res.locals.connection.connect();
-	next();
-});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
