@@ -2,10 +2,11 @@ var mysql = require("mysql");
 
 function setDb(req, res, next) {
     res.locals.connection = mysql.createConnection({
-        host: 'g8mh6ge01lu2z3n1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-        user: 'o3kv8pzh5xqlxz7p',
-        password: 'le1awxk3sy6mywdk',
-        database: 'j59yykxgfkxbngxa'
+        host: process.env.host,
+        user: process.env.user,
+        password: process.env.password,
+        name: process.env.name,
+        database: process.env.database
     });
     res.locals.connection.connect();
     next();

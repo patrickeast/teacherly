@@ -5,13 +5,13 @@ const Footer = props => (
   <footer className="footer text-muted">
       <ul>
         <li>
-          <a href="/features">Features</a>
+          <a href="/about">About</a>
         </li>
         <li>
-          <a href="/">About</a>
+          <a href="/contact">Contact</a>
         </li>
         <li>
-          <a href="/">Contact</a>
+          <a href="https://www.github.com/patrickeast/teacherly" target="_blank">GitHub</a>
         </li>
       </ul>
   </footer>

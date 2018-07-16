@@ -28,7 +28,7 @@ export default class Home extends Component {
                                 <div className="card-body">
                                     <h5 className="card-title">For Parents</h5>
                                     <p className="card-text">Support your child's learning with a visual tool built to make your life easier.<br /><br /><b>A slick interface just for parents.</b> </p>
-                                    <a href="/" className="btn btn-outline-info">Get Started Now</a>
+                                    <a href="/" className="btn btn-outline-info">Coming Soon!</a>
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@ export default class Home extends Component {
                                 <div className="card-body">
                                     <h5 className="card-title">For Administrators</h5>
                                     <p className="card-text">Assess standards, view trends among classrooms and grade levels, and keep up-to-date with your teachers.<br /><br /><b>Enterprise options available.</b></p>
-                                    <a href="/" className="btn btn-outline-info">View Options</a>
+                                    <a href="/" className="btn btn-outline-info">Coming Soon!</a>
                                 </div>
                             </div>
                         </div>
