@@ -11,7 +11,7 @@ const Footer = props => (
           <a href="/contact">Contact</a>
         </li>
         <li>
-          <a href="https://www.github.com/patrickeast/teacherly" target="_blank">GitHub</a>
+          <a href="https://www.github.com/patrickeast/teacherly" target="_blank" rel="noopener noreferrer">GitHub</a>
         </li>
       </ul>
   </footer>

@@ -1,0 +1,33 @@
+.profileContainer {
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.img-container {
+    position: relative;
+    background-color: rgb(75, 183, 226);
+   
+}
+
+.profileImg {
+    position: relative;
+    width: 180px;
+    height: 180px;
+}
+
+.profileImg:hover {
+    border: 5px solid rgb(75, 183, 226);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    transition: .2s ease-in-out;
+}
+
+.profileCard {
+    width: 100%;
+    height: 160px;
+}
+
+.profileCard > div > p {
+    display: inline-block;
+    margin: 0px;
+    padding: 0;
+}

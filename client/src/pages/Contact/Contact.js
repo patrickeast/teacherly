@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./index.css";
-import { Form, FormControl, FormGroup, ControlLabel, Col, Checkbox, Button } from "react-bootstrap";
+import { Form, FormControl, FormGroup, ControlLabel, Col, Button } from "react-bootstrap";
 
 export default class Contact extends Component {
     constructor(props, context) {
