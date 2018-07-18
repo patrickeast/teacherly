@@ -11,13 +11,18 @@
 
 .profileImg {
     position: relative;
+    border: 5px solid rgb(75, 183, 226);
     width: 180px;
     height: 180px;
 }
 
 .profileImg:hover {
-    border: 5px solid rgb(75, 183, 226);
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow:    3px 3px 5px 6px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 3px 3px 5px 6px rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 5px 6px rgba(0,0,0,0.2);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+	zoom: 1;
     transition: .2s ease-in-out;
 }
 

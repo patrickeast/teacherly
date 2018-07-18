@@ -4,7 +4,7 @@ import "./DataTabs.css";
 const DataTabs = props => (
     <div>
         <div className="container">
-            <div className="row m-y-2">
+            <div className="row mt-2">
                 <div className="col-lg-12">
                     <ul className="nav nav-tabs">
                         <li className="nav-item">
