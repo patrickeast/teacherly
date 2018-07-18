@@ -28,7 +28,7 @@ export default class Contact extends Component {
 
     render() {
         return (
-            <div className="Contact-header">
+            <div className="Contact-header bg">
                 <div className="row justify-content-center">
                     <div className="col-11 col-sm-8 col-md-6">
                         <div className="card bg-transparent mt-5 mb-3">

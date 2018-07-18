@@ -4,6 +4,7 @@ import Header from '../../components/Header/Header.js';
 import TeacherImg from '../../images/teacher.png';
 import PrincipalImg from '../../images/principal.png';
 import ParentsImg from '../../images/Parents.png';
+import ModalApp from '../../components/Modal/Modal.js';
 
 export default class Home extends Component {
     render() {
@@ -18,6 +19,7 @@ export default class Home extends Component {
                                 <div className="card-body">
                                     <h5 className="card-title">For Teachers</h5>
                                     <p className="card-text">Finally, an intuitive student data tracking system that works seamlessly around your schedule.<br /><br /><b>Easy to learn. Easy to use.</b></p>
+                                    {/* <ModalApp /> See How it Works */}
                                     <a href="/" className="btn btn-outline-info">See How it Works</a>
                                 </div>
                             </div>
