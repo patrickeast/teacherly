@@ -17,7 +17,7 @@ export default class Home extends Component {
                             <div className="card">
                                 <img className="card-img-top" src={TeacherImg} alt="Card cap" />
                                 <div className="card-body">
-                                    <h5 className="card-title">For Teachers</h5>
+                                    <h5 className="card-title">For Educators</h5>
                                     <p className="card-text">Finally, an intuitive student data tracking system that works seamlessly around your schedule.<br /><br /><b>Easy to learn. Easy to use.</b></p>
                                     {/* <ModalApp /> See How it Works */}
                                     <a href="/" className="btn btn-outline-info">See How it Works</a>
