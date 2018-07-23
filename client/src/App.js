@@ -7,11 +7,11 @@ import Teachers from "./pages/Teachers/Teachers.js";
 import Signup from "./pages/Signup/Signup.js";
 import Login from "./pages/Login/Login.js";
 import Contact from "./pages/Contact/Contact.js";
-// import Nav from "./components/Nav/Nav.js";
+import Nav from "./components/Nav/Nav.js";
 import "./components/Nav/Nav.css";
 import Footer from "./components/Footer/Footer.js";
-import Auth from "./modules/Auth.js";
-import LogoutFunction from "./components/LogoutFunction/LogoutFunction.js";
+import Auth from "./components/Auth.js";
+import LogoutFunction from "./components/LogoutFunction.js";
 import logo from "./teacherly.ico";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -47,11 +47,12 @@ const PropsRoute = ({ component: Component, ...rest }) => (
 )
 
 
-class App extends Component {
+export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      authenticated: false
+      authenticated: false,
+      user: []
     }
   };
 
@@ -65,14 +66,23 @@ class App extends Component {
     this.setState({ authenticated: Auth.isUserAuthenticated() })
   }
 
+  toggleUser = (user) => {
+    console.log("toggleUser running");
+    console.log(user);
+    this.setState({
+      user: user
+    });
+    console.log(this.state);
+  };
+
 
   render() {
     return (
 
       <Router>
-        <div>
+        <main role="main">
           {/* Nav bar for now. */}
-          {this.state.authenticated ? (
+          {/* {this.state.authenticated ? (
             <nav className="navbar navbar-top navbar-expand-md navbar-dark fixed-top bg-dark">
               <a className="navbar-brand" href="/">
                 <img src={logo} className="App-logo" alt="logo" />
@@ -93,19 +103,18 @@ class App extends Component {
                   <a className="btn btn-sm btn-outline-info text-white" href="/logout" role="button">Log Out</a>
                 </div>
               </nav>
-            )}
+            )} */}
+
+          <Nav  isAuth={this.state.authenticated} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} toggleUser={this.toggleUser} user={this.state.user} />
+          <Route exact path="/" component={Home} />
 
           <Switch>
             {/* Main route */}
             <PropsRoute exact path="/" component={Home} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
-            <PrivateRoute path="/teachers" component={Teachers} />
+            <PrivateRoute path="/teachers/:id" component={Teachers} />
             <LoggedOutRoute path="/login" component={Login} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
             <LoggedOutRoute path="/signup" component={Signup}/>
             <Route path="/logout" component={LogoutFunction}/>
-
-
-            {/* <Route path="/parents" component={Teachers} /> */}
-            {/* <Route path="/administrators" component={Teachers} /> */}
 
             {/* Other Routes */}
             <Route path="/about" component={About} />
@@ -113,13 +122,9 @@ class App extends Component {
           </Switch>
 
           <Footer />
-        </div>
+        </main>
 
       </Router >
     )
   }
 }
-
-
-
-export default App;
