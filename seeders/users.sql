@@ -1,0 +1,2 @@
+INSERT INTO users (firstname, lastname, role, email, password, status, created_at, updated_at) VALUES ("Test", "User1", "test1@gmail.com", "$2a$08$yvKCtbKq4jT1DBXeMBkeO.2O7rln0WSGJeMBrzjzPBFVaeMnhLBLq", "active", "2018-05-30 14:09:58", "2018-05-30 14:09:58");
+INSERT INTO users (firstname, lastname, role, email, password, status, created_at, updated_at) VALUES ("Test", "User2", "test2@gmail.com", "$2a$08$yvKCtbKq4jT1DBXeMBkeO.2O7rln0WSGJeMBrzjzPBFVaeMnhLBLq", "active", "2018-05-30 14:09:58", "2018-05-30 14:09:58");

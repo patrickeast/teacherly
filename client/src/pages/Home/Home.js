@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import '../../App.css';
-import Header from '../../components/Header/Header.js';
+import Header from '../../components/Header/Header';
 import TeacherImg from '../../images/teacher.png';
 import PrincipalImg from '../../images/principal.png';
 import ParentsImg from '../../images/Parents.png';
-import ModalApp from '../../components/Modal/Modal.js';
+// import ModalApp from '../../components/Modal/Modal';
 
 export default class Home extends Component {
     render() {
