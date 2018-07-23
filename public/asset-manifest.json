@@ -1,11 +1,16 @@
 {
-  "main.css": "static/css/main.8fb12d42.css",
-  "main.css.map": "static/css/main.8fb12d42.css.map",
-  "main.js": "static/js/main.702595ce.js",
-  "main.js.map": "static/js/main.702595ce.js.map",
+  "main.css": "static/css/main.7ca46ddb.css",
+  "main.css.map": "static/css/main.7ca46ddb.css.map",
+  "main.js": "static/js/main.c1353de7.js",
+  "main.js.map": "static/js/main.c1353de7.js.map",
+  "static/media/Home.jpeg": "static/media/Home.97cd4fac.jpeg",
   "static/media/Parents.png": "static/media/Parents.bc940cb6.png",
+  "static/media/Tech.png": "static/media/Tech.4ccc9453.png",
+  "static/media/Trello.png": "static/media/Trello.5bdf9a63.png",
+  "static/media/classroomTiny.jpg": "static/media/classroomTiny.7dee6f68.jpg",
   "static/media/principal.png": "static/media/principal.81d01887.png",
   "static/media/rocketTiny.jpg": "static/media/rocketTiny.8d5907ab.jpg",
+  "static/media/teacher.jpg": "static/media/teacher.4cde20f2.jpg",
   "static/media/teacher.png": "static/media/teacher.37a006ab.png",
   "static/media/teacherly.ico": "static/media/teacherly.44c12e8c.ico"
 }

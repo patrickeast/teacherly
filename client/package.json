@@ -1,6 +1,7 @@
 {
   "name": "teacherly",
   "version": "0.1.0",
+  "homepage": "https://teacherly.online",
   "proxy": {
     "/api": {
       "target": "http://localhost:3001",
