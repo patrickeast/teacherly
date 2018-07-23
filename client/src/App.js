@@ -12,7 +12,7 @@ import "./components/Nav/Nav.css";
 import Footer from "./components/Footer/Footer.js";
 import Auth from "./components/Auth.js";
 import LogoutFunction from "./components/LogoutFunction.js";
-import logo from "./teacherly.ico";
+// import logo from "./teacherly.ico";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
@@ -47,7 +47,7 @@ const PropsRoute = ({ component: Component, ...rest }) => (
 )
 
 
-export class App extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -128,3 +128,5 @@ export class App extends Component {
     )
   }
 }
+
+export default App;
