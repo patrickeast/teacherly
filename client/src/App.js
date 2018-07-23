@@ -105,7 +105,7 @@ class App extends Component {
               </nav>
             )} */}
 
-          <Nav  isAuth={this.state.authenticated} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} toggleUser={this.toggleUser} user={this.state.user} />
+          <Nav isAuth={this.state.authenticated} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} toggleUser={this.toggleUser} user={this.state.user} />
           <Route exact path="/" component={Home} />
 
           <Switch>
