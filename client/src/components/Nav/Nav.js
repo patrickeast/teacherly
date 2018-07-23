@@ -5,7 +5,7 @@ import Auth from "../Auth.js";
 import "./Nav.css";
 import logo from '../../teacherly.ico';
 
-export class Nav extends React.Component {
+class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -106,3 +106,5 @@ export class Nav extends React.Component {
     )
   }
 }
+
+export default Nav;
