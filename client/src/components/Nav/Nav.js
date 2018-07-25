@@ -30,14 +30,13 @@ class Nav extends React.Component {
     console.log(this.state.email);
     console.log(this.state.password);
 
-    axios.post('/signin', {
+    axios.post('/login', {
       email: this.state.email,
       password: this.state.password
     }).then(response => {
 
       console.log("Response: ");
       console.log(response);
-
       if (response.data.user.message) {
         this.setState({ errors: response.data.user.message });
       } else {
@@ -87,20 +86,65 @@ class Nav extends React.Component {
   render() {
     return (
       <nav className="navbar navbar-top navbar-expand-md navbar-dark fixed-top bg-dark">
-        <Link className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           <img src={logo} className="App-logo" alt="logo" />
         </Link>
         <span className="text-white mt-2"><h3>Teacherly</h3></span>
         {this.props.isAuth ? (
           <div>
-            <p>Hello {this.state.user.firstname} {this.state.user.lastname}</p>
-            <Link className="btn btn-sm btn-outline-info text-white" type="submit" value="submit" onClick={this.handleSignOut}>Log In</Link>
+          <p>Hello {this.state.user.first_name} {this.state.user.last_name}</p>
+          <div className="form-group">
+            <button type="submit" value="Submit" onClick={this.handleSignOut} className="btn btn-outline-info btn-block">Logout</button>
           </div>
-        ) : (
-            <div className="ml-auto mt-2 mt-md-0 my-2 my-sm-0">
-              <Link className="btn btn-sm btn-outline-info text-white" href="/login" role="button">Log In</Link>
-              <Link className="btn btn-sm btn-outline-info ml-3 text-white" href="/signup" role="button">Sign Up</Link>
-            </div>
+        </div>
+      ) : (
+          <ul className="ml-auto mt-2 mt-md-0 my-2 my-sm-0">
+            <li className="dropdown order-0">
+              <button type="button" id="dropdownMenu1" data-toggle="dropdown" className="btn btn-sm btn-outline-info dropdown-toggle">Login <span className="caret"></span></button>
+              <ul className="dropdown-menu dropdown-menu-right mt-2">
+                <li className="px-3 py-2">
+                  <form className="form" onSubmit={this.handleSubmit}>
+                    <div className="form-group">
+                      <input id="emailInput" placeholder="Email" className="form-control form-control-sm" type="text" name="email" value={this.state.email} onChange={this.handleChange} />
+                    </div>
+                    <div className="form-group">
+                      <input id="passwordInput" placeholder="Password" className="form-control form-control-sm" type="text" name="password" value={this.state.password} onChange={this.handleChange} required="" />
+                    </div>
+                    <div className="form-group">
+                      <button type="submit" value="Submit" className="btn btn-sm btn-outline-info btn-block">Login</button>
+                    </div>
+                    {this.state.errors ? (<p> {this.state.errors} </p>) : (<p />)}
+                    <div className="form-group text-center">
+                      <small><Link to='#' data-toggle="modal" data-target="#modalPassword">Forgot password?</Link></small>
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </li>
+            <li className="dropdown order-1 ml-1">
+              <button type="button" id="dropdownMenu2" data-toggle="dropdown" className="btn btn-sm btn-outline-info dropdown-toggle">Sign up <span className="caret"></span></button>
+              <ul className="dropdown-menu dropdown-menu-right mt-2">
+                <li className="px-3 py-2">
+                  <form className="form" onSubmit={this.handleSignup}>
+                    <div className="form-group">
+                      <input id="emailInputSignup" placeholder="Email" className="form-control form-control-sm" type="text" name="email" value={this.state.email} onChange={this.handleChange} required="" />
+                    </div>
+                    <div className="form-group">
+                      <input id="passwordInputSignup" placeholder="Password" className="form-control form-control-sm" type="password" required="" />
+                      <small>Make it a good one.</small>
+                    </div>
+                    <div className="form-group">
+                      <input id="passwordInput" placeholder="Confirm Password" className="form-control form-control-sm" type="password" name="password" value={this.state.password} onChange={this.handleChange} required="" />
+                      <small>Required</small>
+                    </div>
+                    <div className="form-group">
+                      <button type="submit" className="btn btn-sm btn-outline-info btn-block">Sign up</button>
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </li>
+          </ul>
           )}
       </nav>
     )
