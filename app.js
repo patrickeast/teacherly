@@ -70,7 +70,7 @@ require("./routes/test-api-routes.js")(app);
 //syncing our sequlize models and then starting our express app
 db.sequelize.sync().then(() => {
   console.log('Nice! Database looks fine')
-  app.listen(port, () => {
+  app.listen(PORT, () => {
     console.log('Server started on port: ' + PORT);
   });
 }).catch((err) => {
