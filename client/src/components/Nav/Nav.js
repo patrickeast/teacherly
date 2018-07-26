@@ -210,5 +210,4 @@ export default class Nav extends React.Component {
       </nav >
     )
   }
-
 }
