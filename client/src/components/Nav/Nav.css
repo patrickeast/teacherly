@@ -20,9 +20,19 @@
   display: inline-block;
   /* padding-top: 10px; */
   height: 100%;
-  text-align: left;
   padding: 0;
   margin: 0;
+}
+
+.navbar-collapse {
+  position: absolute;
+  right: 20px;
+}
+
+@media (max-width: 750px) {
+  .navbar-collapse {
+    position: relative;
+  }
 }
 
 .navbar a {

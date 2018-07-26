@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Auth from './Auth.js';
+// import PropTypes from 'prop-types';
+import Auth from './Auth';
 
 
 class LogoutFunction extends React.Component {
@@ -21,8 +21,8 @@ class LogoutFunction extends React.Component {
   }
 }
 
-LogoutFunction.contextTypes = {
-  router: PropTypes.object.isRequired
-};
+// LogoutFunction.contextTypes = {
+//   router: PropTypes.object.isRequired
+// };
 
 export default LogoutFunction;
