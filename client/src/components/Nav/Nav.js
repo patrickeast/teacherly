@@ -174,58 +174,41 @@ export default class Nav extends React.Component {
         <span className="text-white mt-2"><h3>Teacherly</h3></span>
         <div className="collapse navbar-collapse" id="navbarCollapse">
 
-          {this.props.isAuth ? (
 
-            <ul className="navbar-nav">
-              <div className="dropdown mr-1">
-                <div className="btn btn-sm btn-outline-info dropdown-toggle" type="div" id="dropdownMenuButtonUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  {this.state.user.first_name} {this.state.user.last_name}
-                </div>
-                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <Link className="dropdown-item" to="/teachers">Your Page</Link>
-                  <Link className="dropdown-item" to="/logout">Log Out</Link>
-                </div>
-              </div>
-              <li className="nav-item">
-                <button type="submit" value="Submit" onClick={this.handleSignOut} className="btn btn-sm btn-outline-info btn-block">Logout</button>
-              </li>
-            </ul>
 
-          ) : (
-
-              <ul className="navbar-nav">
-                <li className="dropdown">
-                  <button type="button" id="dropdownMenu1" data-toggle="dropdown" className="btn btn-sm btn-outline-info dropdown-toggle">Login <span className="caret"></span></button>
-                  <ul className="dropdown-menu dropdown-menu-right mt-2">
-                    <li className="px-3 py-2">
-                      <form className="form" onSubmit={this.handleSubmit}>
-                        <div className="form-group">
-                          <input id="emailInput" placeholder="Email" className="form-control form-control-sm" type="text" name="email" value={this.state.email} onChange={this.handleChange} />
-                        </div>
-                        <div className="form-group">
-                          <input id="passwordInput" placeholder="Password" className="form-control form-control-sm" type="text" name="password" value={this.state.password} onChange={this.handleChange} required="" />
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="dropdownCheck" />
-                            <label class="form-check-label" for="dropdownCheck">
-                              Remember me
-                            </label>
-                          </div>
-                          <div className="form-group">
-                            <button type="submit" value="Submit" className="btn btn-sm btn-info btn-block">Login</button>
-                          </div>
-                          {this.state.errors ? (<p> {this.state.errors} </p>) : (<p />)}
-                      </form>
-                    </li>
-                  </ul>
+          <ul className="navbar-nav">
+            <li className="dropdown">
+              <button type="button" id="dropdownMenu1" data-toggle="dropdown" className="btn btn-sm btn-outline-info dropdown-toggle">Login <span className="caret"></span></button>
+              <ul className="dropdown-menu dropdown-menu-right mt-2">
+                <li className="px-3 py-2">
+                  <form className="form" onSubmit={this.handleSubmit}>
+                    <div className="form-group">
+                      <input id="emailInput" placeholder="Email" className="form-control form-control-sm" type="text" name="email" value={this.state.email} onChange={this.handleChange} />
+                    </div>
+                    <div className="form-group">
+                      <input id="passwordInput" placeholder="Password" className="form-control form-control-sm" type="text" name="password" value={this.state.password} onChange={this.handleChange} required="" />
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck" />
+                      <label class="form-check-label" for="dropdownCheck">
+                        Remember me
+                      </label>
+                    </div>
+                    <div className="form-group">
+                      <button type="submit" value="Submit" className="btn btn-sm btn-info btn-block">Login</button>
+                    </div>
+                    {this.state.errors ? (<p> {this.state.errors} </p>) : (<p />)}
+                  </form>
                 </li>
-                  <li className="nav-item ml-3">
-                    <Link className="btn btn-sm btn-outline-info" to='/signup'>Sign Up</Link>
-                  </li>
               </ul>
-                )}
+            </li>
+            <li className="nav-item ml-3">
+              <Link className="btn btn-sm btn-outline-info" to='/signup'>Sign Up</Link>
+            </li>
+          </ul>
         </div>
       </nav >
-        )
-      }
+    )
+  }
+
 }

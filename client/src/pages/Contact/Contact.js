@@ -31,7 +31,7 @@ export default class Contact extends Component {
             <div className="Contact-header bg">
                 <div className="row justify-content-center">
                     <div className="col-11 col-sm-8 col-md-6">
-                        <div className="card bg-transparent mt-5 mb-3">
+                        <div className="card bg-transparent mt-4 mb-5">
                             <div className="card-header text-center">
                                 <h1>Contact Teacherly</h1>
                             </div>
@@ -81,7 +81,7 @@ export default class Contact extends Component {
                                             </FormGroup>
 
                                             <FormGroup>
-                                                <Col smOffset={2} sm={12}>
+                                                <Col smOffset={0} sm={12}>
                                                     <Button className="btn-sm btn-light" type="submit">Submit</Button>
                                                 </Col>
                                             </FormGroup>
