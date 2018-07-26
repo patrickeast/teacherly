@@ -1,6 +1,80 @@
 import React from "react";
 import "./DataTabs.css";
 import { Table, Button, ButtonToolbar } from "react-bootstrap";
+import { Bar } from 'react-chartjs-2';
+
+
+const data = {
+    labels: [
+        'Student 1',
+        'Student 2',
+        'Student 3',
+        'Student 4',
+        'Student 5',
+        'Student 6',
+        'Student 7',
+        'Student 8',
+        'Student 9',
+        'Student 10',
+        'Student 11',
+        'Student 12',
+        'Student 13',
+        'Student 14',
+        'Student 15',
+        'Student 16',
+        'Student 17',
+        'Student 18',
+        'Student 19',
+        'Student 20',
+    ],
+    datasets: [{
+        data: [88, 67, 56, 65, 100, 100, 100, 100, 34, 7, 67, 85, 76, 75, 84, 30, 46, 89, 95, 98],
+        backgroundColor: [
+            '#63f5ff',
+            '#63f563',
+            '#d86245',
+            '#d87f45',
+            '#d89d45',
+            '#d8bb45',
+            '#d8e253',
+            '#93e253',
+            '#77e253',
+            '#63f563',
+            '#45d8d5',
+            '#45b0d8',
+            '#4587d8',
+            '#4564d8',
+            '#5145d8',
+            '#7545d8',
+            '#9d45d8',
+            '#d845cb',
+            '#d84587',
+            '#d84545'
+        ],
+        hoverBackgroundColor: [
+            '#4cbcc4',
+            '#4dc14d',
+            '#af5038',
+            '#ad6535',
+            '#a37634',
+            '#9e8832',
+            '#979e3a',
+            '#68a03b',
+            '#56a53b',
+            '#43a843',
+            '#2d918f',
+            '#307a96',
+            '#2f5e99',
+            '#304699',
+            '#393099',
+            '#54319b',
+            '#6e2f99',
+            '#992f8f',
+            '#912d5a',
+            '#962e2e'
+        ]
+    }]
+};
 
 class DataTabs extends React.Component {
     constructor(props) {
@@ -76,6 +150,84 @@ class DataTabs extends React.Component {
                                                 }
                                                 <tr>
                                                     <td>
+                                                        000000001
+                                                    </td>
+                                                    <td>
+                                                        1
+                                                    </td>
+                                                    <td>
+                                                        Student
+                                                    </td>
+                                                    <td>
+                                                        AM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        000000002
+                                                    </td>
+                                                    <td>
+                                                        2
+                                                    </td>
+                                                    <td>
+                                                        Student
+                                                    </td>
+                                                    <td>
+                                                        AM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        000000003
+                                                    </td>
+                                                    <td>
+                                                        3
+                                                    </td>
+                                                    <td>
+                                                        Student
+                                                    </td>
+                                                    <td>
+                                                        PM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="form-control" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" />
+                                                    </td>
+                                                    <td>
+                                                        <select className="form-control form-control-sm">
+                                                            <option>Pick One</option>
+                                                            <option>AM</option>
+                                                            <option>PM</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="form-control" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" />
+                                                    </td>
+                                                    <td>
+                                                        <select className="form-control form-control-sm">
+                                                            <option>Pick One</option>
+                                                            <option>AM</option>
+                                                            <option>PM</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
                                                         <input type="text" class="form-control" />
                                                     </td>
                                                     <td>
@@ -96,13 +248,13 @@ class DataTabs extends React.Component {
                                         </Table>
                                         <div className="row mx-auto">
                                             <ButtonToolbar>
-                                                <Button bsSize="small" bsStyle="outline-success" onClick={this.handleAddSecondInput}>
+                                                <Button bsSize="small" bsStyle="outline-info" onClick={this.handleAddSecondInput}>
                                                     Add a Row
                                         </Button>
                                                 <Button bsSize="small" bsStyle="outline-danger">
                                                     Delete Last Row
                                         </Button>
-                                                <Button bsSize="small" bsStyle="info">
+                                                <Button bsSize="small" bsStyle="success">
                                                     Save
                                         </Button>
                                             </ButtonToolbar>
@@ -111,79 +263,199 @@ class DataTabs extends React.Component {
                                 </div>
                                 <div className="tab-pane fade" id="grades">
                                     <h4 className="mt-2">Add a test, and then select it to add grades.</h4>
-                                    <div className="alert alert-success alert-dismissable">
-                                        <a className="panel-close close" data-dismiss="alert">×</a> This is an <strong>alert</strong>. Use this to show important messages to the user.
-                            </div>
-                                    <div className="alert alert-warning alert-dismissable">
-                                        <a className="panel-close close" data-dismiss="alert">×</a> This is an <strong>alert</strong>. Use this to show important messages to the user.
-                            </div>
-                                    <div className="alert alert-info alert-dismissable">
-                                        <a className="panel-close close" data-dismiss="alert">×</a> This is an <strong>alert</strong>. Use this to show important messages to the user.
-                            </div>
+                                    <div className="row">
+                                        <ButtonToolbar>
+                                            <Button bsSize="small" bsStyle="outline-success" onClick={this.handleAddSecondInput}>
+                                                Add a New Test
+                                                </Button>
+                                        </ButtonToolbar>
+                                        <Table responsive>
+                                            <thead>
+                                                <tr>
+                                                    <th>Select Student</th>
+                                                    <th>Select Test</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {
+                                                    this.state.inputLinkClicked ?
+
+                                                        <tr>
+                                                            <td>
+                                                                <input type="text" class="form-control" />
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control" />
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control" />
+                                                            </td>
+                                                            <td>
+                                                                <select className="form-control form-control-sm">
+                                                                    <option>Pick One</option>
+                                                                    <option>AM</option>
+                                                                    <option>PM</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+
+                                                        :
+
+                                                        <div></div>
+                                                }
+                                                <tr>
+                                                    <td>
+                                                        <select className="form-control form-control-sm">
+                                                            <option>Choose from Your Roster</option>
+                                                            <option>Student 1</option>
+                                                            <option>Student 2</option>
+                                                            <option>Student 3</option>
+                                                            <option>Student 4</option>
+                                                            <option>Student 5</option>
+                                                            <option>Student 6</option>
+                                                            <option>Student 7</option>
+                                                            <option>Student 8</option>
+                                                            <option>Student 9</option>
+                                                            <option>Student 10</option>
+                                                            <option>Student 11</option>
+                                                            <option>Student 12</option>
+                                                            <option>Student 13</option>
+                                                            <option>Student 14</option>
+                                                            <option>Student 15</option>
+                                                            <option>Student 16</option>
+                                                            <option>Student 17</option>
+                                                            <option>Student 18</option>
+                                                            <option>Student 19</option>
+                                                            <option>Student 20</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select className="form-control form-control-sm">
+                                                            <option>Choose from the List</option>
+                                                            <option>Choose from the List</option>
+                                                            <option>08.24.18 Decimals</option>
+                                                            <option>08.30.18 Decimals 2</option>
+                                                            <option>09.18.18 Fractions</option>
+                                                            <option>09.27.18 Fraction 2</option>
+                                                            <option>10.24.18 Clock</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </Table>
+                                        <br />
+                                        <Table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Question #</th>
+                                                    <th>Question:</th>
+                                                    <th>Possible Points</th>
+                                                    <th>Given Points</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="form-control" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </Table>
+                                        <div className="row mx-auto">
+                                            <ButtonToolbar>
+                                                <Button bsSize="small" bsStyle="info">
+                                                    Add a Question
+                                                </Button>
+                                                <Button bsSize="small" bsStyle="success">
+                                                    Save Test
+                                                </Button>
+                                            </ButtonToolbar>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="tab-pane fade" id="visual">
                                     <h4 className="mt-2">Filter your results below and hit "Go" to visualize the data.</h4>
-                                    <form>
-                                        <div className="form-group row">
-                                            <label className="col-lg-3 col-form-label form-control-label">First name</label>
-                                            <div className="col-lg-9">
-                                                <input className="form-control" type="text" value="" placeholder="Jane" />
+                                    <Table responsive>
+                                        <thead>
+                                            <tr>
+                                                <th>Select Student(s)</th>
+                                                <th>Select Test</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <div class="button-group">
+                                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> <span class="caret"></span></button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#" class="small" data-value="option1" ><input type="checkbox" />&nbsp;Option 1</a></li>
+                                                    <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox" />&nbsp;Option 2</a></li>
+                                                    <li><a href="#" class="small" data-value="option3" tabIndex="-1"><input type="checkbox" />&nbsp;Option 3</a></li>
+                                                    <li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox" />&nbsp;Option 4</a></li>
+                                                    <li><a href="#" class="small" data-value="option5" tabIndex="-1"><input type="checkbox" />&nbsp;Option 5</a></li>
+                                                    <li><a href="#" class="small" data-value="option6" tabIndex="-1"><input type="checkbox" />&nbsp;Option 6</a></li>
+                                                </ul>
                                             </div>
-                                        </div>
-                                        <div className="form-group row">
-                                            <label className="col-lg-3 col-form-label form-control-label">Last name</label>
-                                            <div className="col-lg-9">
-                                                <input className="form-control" type="text" value="" placeholder="Bishop" />
-                                            </div>
-                                        </div>
-                                        <div className="form-group row">
-                                            <label className="col-lg-3 col-form-label form-control-label">Email</label>
-                                            <div className="col-lg-9">
-                                                <input className="form-control" type="email" value="" placeholder="email@gmail.com" />
-                                            </div>
-                                        </div>
-                                        <div className="form-group row">
-                                            <label className="col-lg-3 col-form-label form-control-label">Time Zone</label>
-                                            <div className="col-lg-9">
-                                                <select id="user_time_zone" className="form-control" size="0">
-                                                    <option value="Hawaii">(GMT-10:00) Hawaii</option>
-                                                    <option value="Alaska">(GMT-09:00) Alaska</option>
-                                                    <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
-                                                    <option value="Arizona">(GMT-07:00) Arizona</option>
-                                                    <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
-                                                    <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
-                                                    <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
-                                                    <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                                        <tr>
+                                            <td>
+                                                <select className="form-control form-control-sm">
+                                                    <option>Choose from the List</option>
+                                                    <option>Student 1</option>
+                                                    <option>Student 2</option>
+                                                    <option>Student 3</option>
+                                                    <option>Student 4</option>
+                                                    <option>Student 5</option>
+                                                    <option>Student 6</option>
+                                                    <option>Student 7</option>
+                                                    <option>Student 8</option>
+                                                    <option>Student 9</option>
+                                                    <option>Student 10</option>
+                                                    <option>Student 11</option>
+                                                    <option>Student 12</option>
+                                                    <option>Student 13</option>
+                                                    <option>Student 14</option>
+                                                    <option>Student 15</option>
+                                                    <option>Student 16</option>
+                                                    <option>Student 17</option>
+                                                    <option>Student 18</option>
+                                                    <option>Student 19</option>
+                                                    <option>Student 20</option>
                                                 </select>
-                                            </div>
-                                        </div>
-                                        <div className="form-group row">
-                                            <label className="col-lg-3 col-form-label form-control-label">New Password</label>
-                                            <div className="col-lg-9">
-                                                <input className="form-control" type="password" placeholder="8-20 characters. Must use uppercase and lowercase letters." />
-                                            </div>
-                                        </div>
-                                        <div className="form-group row">
-                                            <label className="col-lg-3 col-form-label form-control-label">Confirm password</label>
-                                            <div className="col-lg-9">
-                                                <input className="form-control" type="password" placeholder="8-20 characters. Must use uppercase and lowercase letters." />
-                                            </div>
-                                        </div>
-                                        <div className="form-group row">
-                                            <label className="col-lg-3 col-form-label form-control-label"></label>
-                                            <div className="col-lg-9">
-                                                <input type="reset" className="btn btn-sm btn-secondary mr-2" value="Cancel" />
-                                                <input type="button" className="btn btn-sm btn-primary" value="Save Changes" />
-                                            </div>
-                                        </div>
-                                    </form>
+                                            </td>
+                                            <td>
+                                                <select className="form-control form-control-sm">
+                                                    <option>Choose from the List</option>
+                                                    <option>08.24.18 Decimals</option>
+                                                    <option>08.30.18 Decimals 2</option>
+                                                    <option>09.18.18 Fractions</option>
+                                                    <option>09.27.18 Fraction 2</option>
+                                                    <option>10.24.18 Clock</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </Table>
+                                <div className="row mx-auto text-center">
+                                    <Button bsSize="small" bsStyle="success">
+                                        Visualize!
+                                        </Button>
+                                    <Bar data={data} />
+
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
                 </div>
             </div>
+            </div >
         )
 
     }

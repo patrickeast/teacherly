@@ -70,8 +70,8 @@ export default class Signup extends Component {
                                                         <option className="disabled">Google Search</option>
                                                     </select>
                                                 </div>
-                                                <input className="btn btn-sm btn-outline-light mb-3" type="submit" value="Sign Up!" />
                                             </div>
+                                                <a class="btn btn-sm btn-outline-light mb-3" href="/teachers" role="button">Sign Up!</a>
                                         </div>
                                     </form>
                                 </div>

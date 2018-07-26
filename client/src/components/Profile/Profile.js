@@ -1,6 +1,8 @@
 import React from "react";
 import "./Profile.css";
-import profileImg from "../../images/teacher.jpg";
+import profileImg from "../../images/beagle.jpg";
+import { Button } from "react-bootstrap";
+
 
 const Profile = props => (
     <div>
@@ -19,7 +21,9 @@ const Profile = props => (
                             <a className="nav-link active" href="#profile" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="true">Profile</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#messages" data-toggle="tab" role="tab" aria-controls="messages" aria-selected="false">Messages</a>
+                            <a className="nav-link" href="#messages" data-toggle="tab" role="tab" aria-controls="messages" aria-selected="false">Messages
+                                <span class="badge ml-2 badge-danger">3</span>
+                            </a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#edit" data-toggle="tab" role="tab" aria-controls="edit" aria-selected="false">Edit</a>
@@ -27,30 +31,32 @@ const Profile = props => (
                     </ul>
                     <div className="tab-content">
                         <div className="tab-pane fade show active" id="profile">
-                            <h4 className="mt-2">User Profile</h4>
+                            <h4 className="mt-2">Patrick East</h4>
                             <div className="row">
                                 <div className="col-12">
-                                    <h6>About</h6>
+                                    <h6><strong>About</strong></h6>
                                     <p>
-                                        Hi, I'm Michelle. I teach 5th Grade Math at Garden Place Elementary School. On the weekends, I'm either grading papers or watching movies with my husband.
+                                        Hi, I'm Patrick. I'm not a teacher, but I did create this app! Thanks for watching the overview.
                                     </p>
-                                    <h6>Hobbies</h6>
-                                    <p>
-                                        Pop punk music.
-                                    </p>
+                                    <h6><strong>Hobbies:</strong></h6>
+                                    <span className="mr-2 badge badge-pill badge-primary">Pop Punk Music</span>
+                                    <span className="mr-2 badge badge-pill badge-success">Being Vegan?</span>
+                                    <span className="mr-2 badge badge-pill badge-danger">Stephen King novels</span>
+                                    <span className="mr-2 badge badge-pill badge-warning">Coding</span>
+                                    <span className="mr-2 badge badge-pill badge-info">Digital Illustration</span>
                                 </div>
                             </div>
                         </div>
                         <div className="tab-pane fade" id="messages">
                             <h4 className="mt-2">Recent Messages &amp; Notifications</h4>
                             <div className="alert alert-success alert-dismissable">
-                                <a className="panel-close close" data-dismiss="alert">×</a> This is an <strong>alert</strong>. Use this to show important messages to the user.
+                                <a className="panel-close close" data-dismiss="alert">×</a> You added a new roster!
                             </div>
                             <div className="alert alert-warning alert-dismissable">
-                                <a className="panel-close close" data-dismiss="alert">×</a> This is an <strong>alert</strong>. Use this to show important messages to the user.
+                                <a className="panel-close close" data-dismiss="alert">×</a> You added a new test. Time to grade!
                             </div>
                             <div className="alert alert-info alert-dismissable">
-                                <a className="panel-close close" data-dismiss="alert">×</a> This is an <strong>alert</strong>. Use this to show important messages to the user.
+                                <a className="panel-close close" data-dismiss="alert">×</a> Don't forget to verify your email address.
                             </div>
                         </div>
                         <div className="tab-pane fade" id="edit">
@@ -110,8 +116,12 @@ const Profile = props => (
                                 <div className="form-group row">
                                     <label className="col-lg-3 col-form-label form-control-label"></label>
                                     <div className="col-lg-9">
-                                        <input type="reset" className="btn btn-sm btn-secondary mr-2" value="Cancel" />
-                                        <input type="button" className="btn btn-sm btn-primary" value="Save Changes" />
+                                        <Button type="reset" bsSize="small" bsStyle="secondary">
+                                            Reset
+                                        </Button>
+                                        <Button bsType="reset" bsSize="small" bsStyle="primary">
+                                            Save Changes
+                                        </Button>
                                     </div>
                                 </div>
                             </form>

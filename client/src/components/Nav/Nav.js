@@ -166,7 +166,7 @@ export default class Nav extends React.Component {
 
       <nav className="navbar navbar-top navbar-expand-md navbar-dark fixed-top bg-dark">
         <Link className="navbar-brand" to="/">
-          <img src={logo} className="App-logo" alt="logo" title="Home"/>
+          <img src={logo} className="App-logo" alt="logo" title="Home" />
         </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -205,24 +205,27 @@ export default class Nav extends React.Component {
                         <div className="form-group">
                           <input id="passwordInput" placeholder="Password" className="form-control form-control-sm" type="text" name="password" value={this.state.password} onChange={this.handleChange} required="" />
                         </div>
-                        <div className="form-group">
-                          <button type="submit" value="Submit" className="btn btn-sm btn-info btn-block">Login</button>
-                        </div>
-                        {this.state.errors ? (<p> {this.state.errors} </p>) : (<p />)}
-                        <div className="form-group text-center">
-                          <small><Link to='#' data-toggle="modal" data-target="#modalPassword">Forgot password?</Link></small>
-                        </div>
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="dropdownCheck" />
+                            <label class="form-check-label" for="dropdownCheck">
+                              Remember me
+                            </label>
+                          </div>
+                          <div className="form-group">
+                            <button type="submit" value="Submit" className="btn btn-sm btn-info btn-block">Login</button>
+                          </div>
+                          {this.state.errors ? (<p> {this.state.errors} </p>) : (<p />)}
                       </form>
                     </li>
                   </ul>
                 </li>
-                <li className="nav-item ml-3">
-                  <Link className="btn btn-sm btn-outline-info" to='/signup'>Sign Up</Link>
-                </li>
+                  <li className="nav-item ml-3">
+                    <Link className="btn btn-sm btn-outline-info" to='/signup'>Sign Up</Link>
+                  </li>
               </ul>
-            )}
+                )}
         </div>
       </nav >
-    )
-  }
+        )
+      }
 }

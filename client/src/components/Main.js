@@ -120,7 +120,7 @@ export class Main extends Component {
 
       <Switch>
         {/* Main route */}
-        <PropsRoute exact path="/" component={Home} />
+        {/* <PropsRoute exact path="/" component={Home} /> */}
         <PropsRoute path="/teachers/" component={Teachers} />
         <LoggedOutRoute path="/login" component={Login} />
         <LoggedOutRoute path="/signup" component={Signup} />
