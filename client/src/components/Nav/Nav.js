@@ -178,7 +178,7 @@ export default class Nav extends React.Component {
 
           <ul className="navbar-nav">
             <li className="dropdown">
-              <button type="button" id="dropdownMenu1" data-toggle="dropdown" className="btn btn-sm btn-outline-info dropdown-toggle">Log In <span className="caret"></span></button>
+              <button type="button" id="dropdownMenu1" data-toggle="dropdown" className="btn btn-sm btn-outline-info dropdown-toggle">Log In <span><i class="fas fa-pencil-alt"></i></span></button>
               <ul className="dropdown-menu dropdown-menu-right mt-2">
                 <li className="px-3 py-2">
                   <form className="form" onSubmit={this.handleSubmit}>
