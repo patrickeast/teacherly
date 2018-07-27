@@ -392,59 +392,59 @@ class DataTabs extends React.Component {
                                             </tr>
                                         </thead>
                                         <tbody>
-
-                                            <tr>
-                                                <td>
-                                                    <select className="form-control form-control-sm">
-                                                        <option>Choose from the List</option>
-                                                        <option>Student 1</option>
-                                                        <option>Student 2</option>
-                                                        <option>Student 3</option>
-                                                        <option>Student 4</option>
-                                                        <option>Student 5</option>
-                                                        <option>Student 6</option>
-                                                        <option>Student 7</option>
-                                                        <option>Student 8</option>
-                                                        <option>Student 9</option>
-                                                        <option>Student 10</option>
-                                                        <option>Student 11</option>
-                                                        <option>Student 12</option>
-                                                        <option>Student 13</option>
-                                                        <option>Student 14</option>
-                                                        <option>Student 15</option>
-                                                        <option>Student 16</option>
-                                                        <option>Student 17</option>
-                                                        <option>Student 18</option>
-                                                        <option>Student 19</option>
-                                                        <option>Student 20</option>
-                                                    </select>
-                                                </td>
-                                                <td>
-                                                    <select className="form-control form-control-sm">
-                                                        <option>Choose from the List</option>
-                                                        <option>08.24.18 Decimals</option>
-                                                        <option>08.30.18 Decimals 2</option>
-                                                        <option>09.18.18 Fractions</option>
-                                                        <option>09.27.18 Fraction 2</option>
-                                                        <option>10.24.18 Clock</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
+                                            
+                                        <tr>
+                                            <td>
+                                                <select className="form-control form-control-sm">
+                                                    <option>Choose from the List</option>
+                                                    <option>Student 1</option>
+                                                    <option>Student 2</option>
+                                                    <option>Student 3</option>
+                                                    <option>Student 4</option>
+                                                    <option>Student 5</option>
+                                                    <option>Student 6</option>
+                                                    <option>Student 7</option>
+                                                    <option>Student 8</option>
+                                                    <option>Student 9</option>
+                                                    <option>Student 10</option>
+                                                    <option>Student 11</option>
+                                                    <option>Student 12</option>
+                                                    <option>Student 13</option>
+                                                    <option>Student 14</option>
+                                                    <option>Student 15</option>
+                                                    <option>Student 16</option>
+                                                    <option>Student 17</option>
+                                                    <option>Student 18</option>
+                                                    <option>Student 19</option>
+                                                    <option>Student 20</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select className="form-control form-control-sm">
+                                                    <option>Choose from the List</option>
+                                                    <option>08.24.18 Decimals</option>
+                                                    <option>08.30.18 Decimals 2</option>
+                                                    <option>09.18.18 Fractions</option>
+                                                    <option>09.27.18 Fraction 2</option>
+                                                    <option>10.24.18 Clock</option>
+                                                </select>
+                                            </td>
+                                        </tr>
                                         </tbody>
                                     </Table>
-                                    <div className="row mx-auto text-center">
-                                        <Button bsSize="small" bsStyle="success">
-                                            Visualize!
+                                <div className="row mx-auto text-center">
+                                    <Button bsSize="small" bsStyle="success">
+                                        Visualize!
                                         </Button>
-                                        <Bar data={data} />
+                                    <Bar data={data} />
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
                 </div>
+            </div>
             </div >
         )
 
