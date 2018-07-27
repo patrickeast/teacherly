@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
-  BrowserRouter as Router,
-  Route,
+  BrowserRouter as Route,
   Redirect,
   Switch
 } from "react-router-dom";
@@ -19,18 +18,18 @@ import Auth from "./Auth";
 import LogoutFunction from "./LogoutFunction.js";
 // import logo from "./teacherly.ico";
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={props => (
-    Auth.isUserAuthenticated() ? (
-      <Component {...props} {...rest} />
-    ) : (
-        <Redirect to={{
-          pathname: '/',
-          state: { from: props.location }
-        }} />
-      )
-  )} />
-)
+// const PrivateRoute = ({ component: Component, ...rest }) => (
+//   <Route {...rest} render={props => (
+//     Auth.isUserAuthenticated() ? (
+//       <Component {...props} {...rest} />
+//     ) : (
+//         <Redirect to={{
+//           pathname: '/',
+//           state: { from: props.location }
+//         }} />
+//       )
+//   )} />
+// )
 
 const LoggedOutRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
